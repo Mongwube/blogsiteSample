@@ -12,9 +12,53 @@
     font-family: 'Prompt', sans-serif;
     /* font-family: 'Lora', serif; */
 }
+html, body{
+    background-color: #d2cdfd52;
+    height: 100%;
+}
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Candal', serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color: navy;
+}
+/* this clearfix code is a class that can be assigned to any div that the elements are floated to reset or enable the div cover the floated element */
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+/* Generat btn class styling */
+.btn{
+    padding: .5rem 1rem;
+    background: navy;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: .3s ease;
+    /* margin: .25rem; */
+}
+.btn:hover{
+    color: #fff;
+    background-color: rgb(0, 0, 53);
+}
+/* General Text input style */
+.text-input{
+    padding: .7rem 1rem ;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(2, 2, 22, 0.1);
+    font-size: 1.2em;
+    outline: none;
+    color: rgb(2, 2, 22);
+    line-height: 1.5rem;
+    font-family: 'Lora' serif;
 }
 
 header{
@@ -53,7 +97,7 @@ header ul{
 }
 header ul li a{
     display: block;
-    padding: 1.8rem;
+    padding: 1.75rem;
     text-decoration: none;
     color: navy;
 }
@@ -76,6 +120,7 @@ header ul li:hover ul{
 }
 header ul li ul li{
     width: 100%;
+    z-index: 1;
     /* border-left: 1px solid navy; */
 }
 header ul li ul a{
@@ -96,11 +141,17 @@ header .menu-toggle{
     display: none;
     cursor: pointer;
 }
+.page-wrapper{
+    min-height: 100%;
+}
+.page-wrapper a:hover{
+    color: navy;
+}
 
 /* Post Slider Styling */
 
 .post-slider{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
 }
 .post-slider .slider-title{
@@ -127,7 +178,7 @@ header .menu-toggle{
 }
 
 .post-slider .post-wrapper{
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
     width: 84%;
     height: 21.875rem;
     margin: 0px auto;
@@ -135,16 +186,152 @@ header .menu-toggle{
 }
 
 .post-slider .post-wrapper .post{
-    background-color: red;
+    background-color: white;
+    border-radius: 5px;
     display: inline-block;
     width: 18.75rem;
     height: 21.875rem;
     margin: 0rem 0.625rem;
+    box-shadow: .5rem .5rem .5rem .5rem #000a6110;
+}
+
+.post-slider .post-wrapper .post .post-info{
+    height: 8.125rem;
+    /* border: 1px solid red; */
+    padding: 0rem 0.3rem;
 }
 
 .post-slider .post-wrapper .post .slider-img{
     width: 100%;
     height: 12.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* CONTENT  */
+.content{
+    width: 90%;
+    margin: 1.875rem auto 1.875rem;
+    /* border: 1px solid rgb(229, 255, 0); */
+}
+
+.content .main-content{
+    width: 70%;
+    float: left;
+    /* border: 1px dotted rgb(0, 255, 85); */
+}
+
+.content .main-content .post{
+    width: 95%;
+    height: 16.875rem;
+    margin: 1.25rem auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+.content .main-content .post .post-img{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.content .main-content .post .post-preview{
+    padding: 0.625rem;
+    width: 60%;
+    float: right;
+}
+
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    border: 1px solid navy;
+    background: transparent;
+    border-radius: none;
+    color: navy  !important;
+}
+
+.content .main-content .post .read-more:hover{
+    border: 1px solid navy;
+    background: navy;
+    border-radius: none;
+    color: white !important;
+    transition: .25s;
+}
+
+.content .main-content .recent-post-title{
+    margin: 1.25rem;
+}
+.content .sidebar{
+    width: 30%;
+    float: right;
+    /* border: 1px dashed rgb(4, 0, 255); */
+    height: 18.75rem;
+}
+
+.content .sidebar .section{
+    background-color: white;
+    border-radius: 0.3rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.content .sidebar .section .section-title{
+    margin: 0.625rem 0rem 0.625rem 0rem;
+}
+
+.content .sidebar .section.search{
+    margin-top: 4.5rem;
+}
+
+.content .sidebar .section.topic ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.content .sidebar .section.topic a{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    display: block;
+    padding: 15px 0px 15px 0px;
+    transition: 0.3s;
+}
+
+.content .sidebar .section.topic a:hover{
+    padding-left: 1rem;
+    transition: 0.3s;
+}
+/* Styling for footer */
+.footer{
+    background:  rgb(9, 9, 58);
+    color: #fff;
+    height: 400px;
+    position: relative;
+}
+
+.footer .footer-content{
+    border: 1px solid red;
+    height: 350px;
+    display: flex;
+}
+.footer .footer-content .footer-section{
+    flex: 1;
+    padding: 25Px;
+    border: 1px solid whitesmoke;
+}
+
+.footer .footer-bottom{
+    background:rgb(16, 16, 88);
+    color: rgb(103, 103, 148);
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    /* top: 100%; */
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
 }
     /* Media Query */
 @media only screen and (max-width:750px) {
