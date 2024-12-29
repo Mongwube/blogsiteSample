@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+    /* font-family: 'Lora', serif; */
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Candal', serif;
+}
+
+header{
+    background-color: #00848910;
+    border-bottom: 1px solid navy;
+    height: 5rem;
+    width: 100%;
+}
+/* Logo style */
+header #logo{
+    float: left;
+    height: inherit;
+    margin-left: 2rem; 
+    color: blue;
+    /* width: 10rem; */
+}
+header #logo-text{
+    margin: 1.2rem;
+    font-family: 'Candal', serif;
+}
+header #logo span{
+    color: navy;
+}
+/* Nav style */
+header ul{
+    /* border: 1px solid red; */
+    float: right;
+    /* color: white; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ header ul li{
+    float: left;
+    position: relative;
+}
+header ul li a{
+    display: block;
+    padding: 1.8rem;
+    text-decoration: none;
+    color: navy;
+}
+header ul a:hover{
+     background-color: rgb(9, 9, 58);
+     color: #cffafcc4;
+     transition: 0.5s;
+} 
+
+header ul li ul{
+    position: absolute;
+    right: 0px;
+    width: 11rem;
+    display: none;
+}
+
+header ul li:hover ul{
+    display: block;
+    transition: .5s;
+}
+header ul li ul li{
+    width: 100%;
+    /* border-left: 1px solid navy; */
+}
+header ul li ul a{
+    padding: 0.625rem;
+    background-color: #00848910;
+    color:navy;
+}
+
+header ul li ul a:hover{
+    background-color: rgb(9, 9, 58);
+    color: #cffafcc4;
+}
+
+.logout{
+    color: red;
+}
+header .menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+
+/* Post Slider Styling */
+
+.post-slider{
+    border: 1px solid red;
+    position: relative;
+}
+.post-slider .slider-title{
+    text-align: center;
+    margin: 1.875rem auto;
+}
+.post-slider .next{
+    position: absolute;
+    top: 50%;
+    right: 1.875rem;
+    font-size: 2em;
+    color: navy;
+    background-color: transparent;
+    cursor: pointer;
+}
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 1.875rem;
+    font-size: 2em;
+    color: navy;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.post-slider .post-wrapper{
+    border: 1px dotted red;
+    width: 84%;
+    height: 21.875rem;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.post-slider .post-wrapper .post{
+    background-color: red;
+    display: inline-block;
+    width: 18.75rem;
+    height: 21.875rem;
+    margin: 0rem 0.625rem;
+}
+
+.post-slider .post-wrapper .post .slider-img{
+    width: 100%;
+    height: 12.5rem;
+}
+    /* Media Query */
+@media only screen and (max-width:750px) {
+    header{
+        position: relative;
+    }
+    header #logo{
+        float: left;
+        height: inherit;
+        margin-left: 1rem; 
+        color: blue;
+        /* width: 10rem; */
+    }
+    header ul{
+    width: 100%;
+    background-color: #00848910;
+    max-height: 0em;
+    overflow: hidden;
+    transition: 0.3s ease; /* Smooth animation */
+    /* border: 1px solid red; */
+    }
+    .showing{
+        max-height: 100em;
+    }
+    header ul li{
+        width: 100%;
+    }
+    header ul li ul{
+        position: static;
+        width: 100%;
+        display: block;
+    }
+    header ul li ul li a{
+        padding: 1rem;
+        background-color: inherit;
+        padding-left: 3rem;
+        color:navy;
+    }
+    
+    header ul li ul a:hover{
+        background-color: rgb(9, 9, 58);
+        color: #cffafcc4;
+    }
+
+    header .menu-toggle{
+        display: block;
+        position: absolute;
+        right:2rem;
+        top:2rem ;
+        font-size:1.5rem ;
+        cursor: pointer;
+    }
+
+}
