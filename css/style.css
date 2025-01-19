@@ -305,7 +305,7 @@ header .menu-toggle{
 /* Styling for footer */
 .footer{
     background:  rgb(9, 9, 58);
-    color: #fff;
+    color: l#ffffffc4;
     height: 400px;
     position: relative;
 }
@@ -314,11 +314,36 @@ header .menu-toggle{
     border: 1px solid red;
     height: 350px;
     display: flex;
+    color: #fff;
 }
 .footer .footer-content .footer-section{
     flex: 1;
     padding: 25Px;
     border: 1px solid whitesmoke;
+}
+
+.footer .footer-content h1, .footer .footer-content h2{
+    color: #ffffff9d;
+}
+.footer .footer-content .about h1{
+    color: blue;
+}
+.footer .footer-content .about h1 span{
+    color: #ffffff9d;
+}
+.footer .footer-content .about .contact span{
+    display: block;
+    font-size:1.1rem;
+    margin-bottom: 8px;
+}
+.footer .footer-content .about .socials a{
+    border: 1px solid gray;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    padding-right: 5px;
+    text-align: center;
+    display: inline-block;
 }
 
 .footer .footer-bottom{
