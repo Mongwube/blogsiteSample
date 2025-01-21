@@ -13,8 +13,15 @@
     /* font-family: 'Lora', serif; */
 }
 html, body{
-    background-color: #d2cdfd52;
+    background-color: #fff;
     height: 100%;
+}
+
+#blog-body{
+    background-color: #d2cdfd52;
+}
+#single-body{
+    background-color: #fff;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -42,6 +49,10 @@ a:hover{
     border-radius: .25rem;
     transition: .3s ease;
     /* margin: .25rem; */
+}
+.btn-big{
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
 }
 .btn:hover{
     color: #fff;
@@ -220,6 +231,12 @@ header .menu-toggle{
     /* border: 1px dotted rgb(0, 255, 85); */
 }
 
+content .main-content.single{
+ background-color: white;
+ padding: 20px 50px;
+ font-size: 1.1em;
+}
+
 .content .main-content .post{
     width: 95%;
     height: 16.875rem;
@@ -269,6 +286,10 @@ header .menu-toggle{
     height: 18.75rem;
 }
 
+.content .sidebar.single{
+    height: 100%;
+}
+
 .content .sidebar .section{
     background-color: white;
     border-radius: 0.3rem;
@@ -311,15 +332,15 @@ header .menu-toggle{
 }
 
 .footer .footer-content{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 350px;
     display: flex;
     color: #fff;
 }
 .footer .footer-content .footer-section{
     flex: 1;
-    padding: 25Px;
-    border: 1px solid whitesmoke;
+    padding: 25px;
+    /* border: 1px solid whitesmoke; */
 }
 
 .footer .footer-content h1, .footer .footer-content h2{
@@ -329,7 +350,7 @@ header .menu-toggle{
     color: blue;
 }
 .footer .footer-content .about h1 span{
-    color: #ffffff9d;
+    color: #ffffff41;
 }
 .footer .footer-content .about .contact span{
     display: block;
@@ -344,8 +365,42 @@ header .menu-toggle{
     padding-right: 5px;
     text-align: center;
     display: inline-block;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: all .3s;
 }
-
+.footer .footer-content .about .socials a:hover{
+    border:1px solid #fff;
+    color: #fff;
+    transition: all .3s;
+}
+.footer .footer-content .links ul a{
+    display: block;
+    margin-bottom:10px ;
+    font-size: 1.2rem;
+    transition: all .3s;
+}
+.footer .footer-content .links ul a:hover{
+    color:  #ffffff9d;
+    margin-left: 15px;
+    transition: all .3s;
+}
+.footer .footer-content .contact-form .contact-input{
+    background:#ffffff3d ;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    padding: .7rem 1.2rem;
+    border: none;
+}
+.footer .footer-content .contact-form .contact-input:focus{
+    background-color:#ffffff1a ;
+}
+.footer .footer-content .contact-form .contact-btn{
+    float: right;
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+}
 .footer .footer-bottom{
     background:rgb(16, 16, 88);
     color: rgb(103, 103, 148);
