@@ -12,17 +12,18 @@
     font-family: 'Prompt', sans-serif;
     /* font-family: 'Lora', serif; */
 }
-html, body{
-    background-color: #fff;
-    height: 100%;
+body{
+    background-color: #d2cdfd52;
+    background-size: 100%;
 }
 
-#blog-body{
-    background-color: #d2cdfd52;
-}
-#single-body{
+/* #single-body{
     background-color: #fff;
-}
+    padding: 20px 50px;
+    font-size: 1.1em;
+} */
+
+
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Candal', serif;
@@ -48,6 +49,8 @@ a:hover{
     border: 1px solid transparent;
     border-radius: .25rem;
     transition: .3s ease;
+    font-size: 1.08em;
+    font-family: 'Lora', serif;
     /* margin: .25rem; */
 }
 .btn-big{
@@ -64,12 +67,32 @@ a:hover{
     display: block;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid rgba(2, 2, 22, 0.1);
+    border: 1px solid rgba(2, 2, 22, 0.164);
     font-size: 1.2em;
     outline: none;
     color: rgb(2, 2, 22);
     line-height: 1.5rem;
     font-family: 'Lora' serif;
+}
+
+.msg{
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.success{
+    color: rgb(1, 73, 1);
+    border: 1px solid rgba(3, 128, 3, 0.3);
+    background-color: lightgreen;
+}
+
+.error{
+    color: rgb(73, 1, 1);
+    border: 1px solid rgba(128, 3, 3, 0.3);
+    background-color: rgb(238, 144, 144);
 }
 
 header{
@@ -222,19 +245,26 @@ header .menu-toggle{
 .content{
     width: 90%;
     margin: 1.875rem auto 1.875rem;
-    /* border: 1px solid rgb(229, 255, 0); */
+    border: 1px solid rgb(229, 255, 0);
 }
 
 .content .main-content{
     width: 70%;
     float: left;
+    /* background-color: #fff; */
     /* border: 1px dotted rgb(0, 255, 85); */
 }
 
-content .main-content.single{
+.content .main-content.single {
  background-color: white;
  padding: 20px 50px;
  font-size: 1.1em;
+ border-radius: 5px;
+}
+
+.content .main-content.single .post-title{
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .content .main-content .post{
@@ -244,6 +274,20 @@ content .main-content.single{
     border-radius: 5px;
     background: white;
     position: relative;
+}
+
+.content .popular .post{
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+
+}
+
+.content .popular .post img{
+    height: 60px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
 }
 
 .content .main-content .post .post-img{
@@ -279,6 +323,8 @@ content .main-content.single{
 .content .main-content .recent-post-title{
     margin: 1.25rem;
 }
+
+
 .content .sidebar{
     width: 30%;
     float: right;
@@ -288,6 +334,8 @@ content .main-content.single{
 
 .content .sidebar.single{
     height: 100%;
+    padding: 0px 10px;
+
 }
 
 .content .sidebar .section{
@@ -323,6 +371,31 @@ content .main-content.single{
     padding-left: 1rem;
     transition: 0.3s;
 }
+/* Auth Pages */
+.auth-content{
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.auth-content .form-title{
+    text-align: center;
+}
+
+.auth-content form div{
+    margin-bottom: 10px;
+}
+
+.auth-content form p{
+    text-align: center;
+}
+
+.auth-content form p a{
+    text-decoration: underline;
+}
+
 /* Styling for footer */
 .footer{
     background:  rgb(9, 9, 58);
@@ -465,4 +538,9 @@ content .main-content.single{
         cursor: pointer;
     }
 
+}
+@media only screen and (max-width:934px){
+    .content{
+        width: 100%;
+    }
 }
